@@ -11,4 +11,4 @@ $toInstall = (
     "sharpkeys"
 );
 
-$toInstall | choco install --execution-timeout 30 -y 
+$toInstall | %{ choco install $_ --execution-timeout 30 -y } 
