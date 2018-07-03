@@ -1,6 +1,7 @@
 $toInstall = (
     "visualstudiocode", 
     "googlechrome",
+    "firefox",
     "nvm",
     "spotify",
     "docker",
@@ -11,4 +12,4 @@ $toInstall = (
     "sharpkeys"
 );
 
-$toInstall | %{ choco install $_ --execution-timeout 30 -y } 
+$toInstall | %{ choco install $_ --execution-timeout 0 -y --ignore-checksums } 
