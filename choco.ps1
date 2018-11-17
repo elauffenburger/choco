@@ -5,11 +5,8 @@ $toInstall = (
     "nvm",
     "spotify",
     "docker",
-    "filezilla",
     "fiddler",
-    "conemu",
-    "cmder",
-    "sharpkeys"
+    "conemu"
 );
 
 $toInstall | %{ choco install $_ --execution-timeout 0 -y --ignore-checksums } 
