@@ -3,10 +3,15 @@ $toInstall = (
     "googlechrome",
     "firefox",
     "nvm",
-    "spotify",
     "docker",
     "fiddler",
-    "conemu"
+    "conemu",
+    "neovim"
 );
 
 $toInstall | %{ choco install $_ --execution-timeout 0 -y --ignore-checksums } 
+
+Write-Host "Some other programs to install (manually):`
+  * Spotify`
+  * rustup`
+"
